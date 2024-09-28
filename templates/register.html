@@ -1,0 +1,131 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<style>
+/* Styling */
+a:hover, a:focus {
+    outline: none;
+    text-decoration: none;
+}
+.tab {
+    background: #200122;
+    background: -webkit-linear-gradient(to bottom, #6f0000, #200122);
+    background: linear-gradient(to bottom, #6f0000, #200122);
+    padding: 40px 50px;
+    position: relative;
+}
+.tab:before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: linear-gradient(#2e3a6a, #2f0b45);
+    opacity: 0.85;
+}
+.tab .tab-content {
+    padding: 20px 0 0 0;
+    margin-top: 40px;
+    background: transparent;
+    z-index: 1;
+    position: relative;
+}
+.form-bg { background: #ddd; }
+.form-horizontal .form-group {
+    margin: 0 0 15px 0;
+    position: relative;
+}
+.form-horizontal .form-control {
+    height: 40px;
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    border-radius: 20px;
+    box-shadow: none;
+    padding: 0 20px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #fff;
+    transition: all 0.3s ease 0s;
+}
+.form-horizontal .form-control:focus {
+    box-shadow: none;
+    outline: 0 none;
+}
+.form-horizontal .form-group label {
+    padding: 0 20px;
+    color: #7f8291;
+    text-transform: capitalize;
+    margin-bottom: 10px;
+}
+.form-horizontal .btn {
+    width: 100%;
+    background: #eec111;
+    padding: 10px 20px;
+    border: none;
+    font-size: 14px;
+    font-weight: bold;
+    color: #fff;
+    border-radius: 20px;
+    text-transform: uppercase;
+    margin: 20px 0 30px 0;
+}
+.form-horizontal .btn:focus {
+    background: #eec111;
+    color: #fff;
+    outline: none;
+    box-shadow: none;
+}
+@media only screen and (max-width: 479px) {
+    .tab { padding: 40px 20px; }
+}
+</style>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-offset-3 col-md-6">
+            <div class="tab" role="tabpanel">
+              <h3 style="color: white">Sign in</h3>
+                <!-- Ro'yxatdan o'tish formasi -->
+                <div class="tab-content tabs">
+                    <div role="tabpanel" class="tab-pane fade in active" id="Section2">
+                        <form class="form-horizontal" method="POST" action="{% url 'register' %}">
+                            {% csrf_token %}
+                            <div class="form-group">
+                                <label for="username">Username</label>
+                                <input type="text" class="form-control" id="username" name="username" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="first_name">First Name</label>
+                                <input type="text" class="form-control" id="first_name" name="first_name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="last_name">Last Name</label>
+                                <input type="text" class="form-control" id="last_name" name="last_name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email address</label>
+                                <input type="email" class="form-control" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="password">Password</label>
+                                <input type="password" class="form-control" id="password" name="password" required>
+                            </div>
+                            <div class="form-group">
+                                <button type="submit" class="btn btn-default">Sign up</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div><!-- /.col-md-offset-3 col-md-6 -->
+    </div><!-- /.row -->
+</div><!-- /.container -->
+
+{% endblock %}

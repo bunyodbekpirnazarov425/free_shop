@@ -9,6 +9,10 @@
     <!-- Mobile Metas -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Font Awesome (ixtiyoriy, agar ikonka ishlatsangiz) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
     <!-- Site Metas -->
     <title>Freshshop - Ecommerce Bootstrap 4 HTML Template</title>
     <meta name="keywords" content="">
@@ -20,6 +24,30 @@
 </head>
 
 <body>
+
+    <!-- Start Main Top -->
+    {% include 'components/_main_top.html' %}
+    <!-- End Main Top -->
+
+    <!-- Start Main Top -->
+    {% include 'components/_navbar.html' %}
+    <!-- End Main Top -->
+
+    <!-- Start Top Search -->
+    <div class="top-search">
+        <div class="container">
+            <div class="input-group">
+                <span class="input-group-addon"><i class="fa fa-search"></i></span>
+                <input type="text" class="form-control" placeholder="Search">
+                <span class="input-group-addon close-search"><i class="fa fa-times"></i></span>
+            </div>
+        </div>
+    </div>
+    <!-- End Top Search -->
+
+    <!-- Start Slider -->
+
+    <!-- End Slider -->
 
     {% block content %}
 
