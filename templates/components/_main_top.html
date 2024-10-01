@@ -14,12 +14,13 @@
                     </div>
                     <div class="our-link">
                         <ul>
-                            <li><a href="#"><i class="fa fa-user s_color"></i> My Account</a></li>
+                            <li><a href="{% url 'profile' %}"><i class="fa fa-user s_color"></i> My Account</a></li>
                             <li><a href="#"><i class="fas fa-location-arrow"></i> Our location</a></li>
                             <li><a href="#"><i class="fas fa-headset"></i> Contact Us</a></li>
                             {% if request.user.is_authenticated %}
-                            <li><a href="#">My Account</a></li>
+                            <li><a href="{% url 'profile' %}">My Account</a></li>
                             <li><a href="{% url 'logout' %}">Logout</a></li>
+                            <li><a href="#">{{ request.user.name }}</a></li>
                             {% else %}
                             <li><a href="{% url 'login' %}">Log In</a></li>
                             <li><a href="{% url 'register' %}">Register</a></li>

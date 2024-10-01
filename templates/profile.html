@@ -1,0 +1,498 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+<!--        &lt;!&ndash; My Account Area &ndash;&gt;-->
+<!--        <div class="my-account-area ptb-100">-->
+<!--            <div class="container">-->
+<!--                <div class="tab account-tab">-->
+<!--                    <div class="row">-->
+<!--                        <div class="col-lg-4">-->
+<!--                            <ul class="tabs">-->
+<!--                                <li>-->
+<!--                                    <a href="#">-->
+<!--                                        My Account-->
+<!--                                    </a>-->
+<!--                                </li>-->
+<!--                                <li>-->
+<!--                                    <a href="#">-->
+<!--                                        My Order-->
+<!--                                    </a>-->
+<!--                                </li>-->
+<!--                                <li>-->
+<!--                                    <a href="#">-->
+<!--                                        Address-->
+<!--                                    </a>-->
+<!--                                </li>-->
+<!--                                <li>-->
+<!--                                    <a href="#">-->
+<!--                                        Log Out-->
+<!--                                    </a>-->
+<!--                                </li>-->
+<!--                            </ul>-->
+<!--                        </div>-->
+
+<!--                        <div class="col-lg-8">-->
+<!--                            <div class="tab_content current active">-->
+<!--                                <div class="tabs_item current">-->
+<!--                                    <div class="account-tab-item">-->
+<!--                                        <div class="account-details">-->
+<!--                                            <h2>Profile Details</h2>-->
+<!--                                            <div class="account-profile">-->
+<!--                                                <div class="account-profile-img">-->
+<!--                                                    <img src="{% static 'assets/images/products/product-profile1.jpg' %}" alt="Images">-->
+<!--                                                </div>-->
+<!--                                                <ul>-->
+<!--                                                    <li><a href="#">Upload</a></li>-->
+<!--                                                    <li><a href="#">Remove</a></li>-->
+<!--                                                </ul>-->
+<!--                                            </div>-->
+
+<!--                                            <div class="account-form">-->
+<!--                                                <form>-->
+<!--                                                    <div class="row">-->
+<!--                                                        <div class="col-lg-6">-->
+<!--                                                            <div class="form-group">-->
+<!--                                                                <input type="text"  class="form-control" placeholder="Megan">-->
+<!--                                                            </div>-->
+<!--                                                        </div>-->
+
+<!--                                                        <div class="col-lg-6">-->
+<!--                                                            <div class="form-group">-->
+<!--                                                                <input type="text"  class="form-control" placeholder="Fox">-->
+<!--                                                            </div>-->
+<!--                                                        </div>-->
+
+<!--                                                        <div class="col-lg-12">-->
+<!--                                                            <div class="form-group">-->
+<!--                                                                <input type="email"  class="form-control" placeholder="megan@hello.com">-->
+<!--                                                            </div>-->
+<!--                                                        </div>-->
+
+<!--                                                        <div class="col-lg-12">-->
+<!--                                                            <div class="form-group">-->
+<!--                                                                <input type="text" class="form-control" placeholder="+501-529-1747">-->
+<!--                                                            </div>-->
+<!--                                                        </div>-->
+<!--                                                    </div>-->
+<!--                                                </form>-->
+<!--                                            </div>-->
+
+<!--                                            <div class="account-form">-->
+<!--                                                <h3>Change Password</h3>-->
+<!--                                                <form>-->
+<!--                                                    <div class="row">-->
+<!--                                                        <div class="col-lg-12">-->
+<!--                                                            <div class="form-group">-->
+<!--                                                                <input type="password"  class="form-control" placeholder="Current Password">-->
+<!--                                                            </div>-->
+<!--                                                        </div>-->
+
+<!--                                                        <div class="col-lg-12">-->
+<!--                                                            <div class="form-group">-->
+<!--                                                                <input type="password"  class="form-control" placeholder="New Password">-->
+<!--                                                            </div>-->
+<!--                                                        </div>-->
+
+<!--                                                        <div class="col-lg-12">-->
+<!--                                                            <div class="form-group">-->
+<!--                                                                <input type="password"  class="form-control" placeholder="Confirm Password">-->
+<!--                                                            </div>-->
+<!--                                                        </div>-->
+
+<!--                                                        <div class="col-lg-4 col-md-6">-->
+<!--                                                            <button type="submit" class="default-btn btn-bg-three">-->
+<!--                                                                Confirm-->
+<!--                                                            </button>-->
+<!--                                                        </div>-->
+
+<!--                                                        <div class="col-lg-8 col-md-6">-->
+<!--                                                            <button type="submit" class="default-btn btn-bg-three">-->
+<!--                                                                Cancel-->
+<!--                                                            </button>-->
+<!--                                                        </div>-->
+<!--                                                    </div>-->
+<!--                                                </form>-->
+<!--                                            </div>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+
+<!--                                <div class="tabs_item">-->
+<!--                                    <div class="account-tab-item">-->
+<!--                                        <div class="checkout-order">-->
+<!--                                            <h2>My Orders</h2>-->
+<!--                                            <h3 class="title-item">Item Description & Amount <span>Cash</span></h3>-->
+<!--                                            <ul class="checkout-product">-->
+<!--                                                <li>-->
+<!--                                                    <img src="{% static 'assets/images/products/products-img1.png' %}" alt="Images">-->
+<!--                                                    <h3>Organic Butter</h3>-->
+<!--                                                    <span>$2.0</span>-->
+<!--                                                    <div class="price-tag">$18.0</div>-->
+<!--                                                </li>-->
+
+<!--                                                <li>-->
+<!--                                                    <img src="{% static 'assets/images/products/products-img2.png' %}" alt="Images">-->
+<!--                                                    <h3>Fresh Carrots</h3>-->
+<!--                                                    <span>$25.0</span>-->
+<!--                                                    <div class="price-tag">$225.0</div>-->
+<!--                                                </li>-->
+<!--                                            </ul>-->
+
+<!--                                            <div class="total-amount">-->
+<!--                                                <h2 class="amount-title">Sub Total Amount <span>$243.0</span></h2>-->
+<!--                                                <h3 class="vat-title">Vat (5%) <span>$12.0</span></h3>-->
+<!--                                                <h3 class="total-title">Total Amount<span>$255.0</span></h3>-->
+<!--                                            </div>-->
+
+<!--                                            <div class="amount-btn">-->
+<!--                                                <a href="#" class="default-btn btn-bg-three">Next</a>-->
+<!--                                            </div>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+
+<!--                                <div class="tabs_item">-->
+<!--                                    <div class="account-tab-item">-->
+<!--                                        <div class="address-details">-->
+<!--                                            <h2>My Addresses <a href="#" class="address-edit">Edit</a></h2>-->
+<!--                                            <p>New Jersey</p>-->
+<!--                                            <span>2873 Yorkshire Circle, NC, Carolina</span>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+
+<!--                                <div class="tabs_item">-->
+<!--                                    <div class="account-tab-item">-->
+<!--                                        <div class="contact-form">-->
+<!--                                            <h2>Log In</h2>-->
+<!--                                            <form>-->
+<!--                                                <div class="row">-->
+<!--                                                    <div class="col-lg-12 ">-->
+<!--                                                        <div class="form-group">-->
+<!--                                                            <input type="text" class="form-control" required data-error="Please enter your Username or Email" placeholder="Username or Email">-->
+<!--                                                        </div>-->
+<!--                                                    </div>-->
+
+<!--                                                    <div class="col-12">-->
+<!--                                                        <div class="form-group">-->
+<!--                                                            <input class="form-control" type="password" name="password" placeholder="Password">-->
+<!--                                                        </div>-->
+<!--                                                    </div>-->
+
+<!--                                                    <div class="col-lg-12 form-condition">-->
+<!--                                                        <div class="agree-label">-->
+<!--                                                            <input type="checkbox" id="chb1">-->
+<!--                                                            <label for="chb1">-->
+<!--                                                                Remember Me <a class="forget" href="forget-password.html">Forgot My Password?</a>-->
+<!--                                                            </label>-->
+<!--                                                        </div>-->
+<!--                                                    </div>-->
+
+<!--                                                    <div class="col-lg-12 ">-->
+<!--                                                        <button type="submit" class="default-btn btn-bg-three">-->
+<!--                                                            Log In Now-->
+<!--                                                        </button>-->
+<!--                                                    </div>-->
+<!--                                                </div>-->
+<!--                                            </form>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--        &lt;!&ndash; My Account Area End &ndash;&gt;-->
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<style>
+/* Common Styling */
+a:hover, a:focus {
+    outline: none;
+    text-decoration: none;
+}
+
+.tab {
+    background: #200122;
+    background: -webkit-linear-gradient(to bottom, #6f0000, #200122);
+    background: linear-gradient(to bottom, #6f0000, #200122);
+    padding: 40px 50px;
+    position: relative;
+}
+
+.tab:before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: linear-gradient(#2e3a6a, #2f0b45);
+    opacity: 0.85;
+}
+
+.tab .tab-content {
+    padding: 20px 0 0 0;
+    margin-top: 40px;
+    background: transparent;
+    z-index: 1;
+    position: relative;
+}
+
+/* Form Styling */
+.form-bg { background: #ddd; }
+
+.form-horizontal .form-group {
+    margin: 0 0 15px 0;
+    position: relative;
+}
+
+.form-horizontal .form-control {
+    height: 40px;
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    border-radius: 20px;
+    box-shadow: none;
+    padding: 0 20px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #fff;
+    transition: all 0.3s ease 0s;
+}
+
+.form-horizontal .form-control:focus {
+    box-shadow: none;
+    outline: 0 none;
+}
+
+.form-horizontal .form-group label {
+    padding: 0 20px;
+    color: #7f8291;
+    text-transform: capitalize;
+    margin-bottom: 10px;
+}
+
+.form-horizontal .btn {
+    width: 100%;
+    background: #eec111;
+    padding: 10px 20px;
+    border: none;
+    font-size: 14px;
+    font-weight: bold;
+    color: #fff;
+    border-radius: 20px;
+    text-transform: uppercase;
+    margin: 20px 0 30px 0;
+}
+
+.form-horizontal .btn:focus {
+    background: #eec111;
+    color: #fff;
+    outline: none;
+    box-shadow: none;
+}
+
+/* Profile Image Styling */
+.account-profile-img img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 3px solid #eec111;
+    margin-bottom: 15px;
+}
+
+/* Buttons for Upload and Remove */
+.account-profile ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.account-profile ul li a {
+    display: inline-block;
+    color: #eec111;
+    font-weight: bold;
+    padding: 5px 15px;
+    border: 1px solid #eec111;
+    border-radius: 20px;
+    margin: 5px;
+    transition: background-color 0.3s;
+}
+
+.account-profile ul li a:hover {
+    background: #eec111;
+    color: #200122;
+}
+
+/* Password Change Section */
+.account-form h3 {
+    color: #eec111;
+    margin-bottom: 20px;
+}
+
+@media only screen and (max-width: 479px) {
+    .tab { padding: 40px 20px; }
+}
+
+.account-profile-img {
+    width: 150px;
+    height: 150px;
+    margin: 0 auto;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 3px solid #eec111;
+}
+
+.account-profile-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+</style>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-offset-3 col-md-6">
+            <div class="tab" role="tabpanel">
+                <h3 style="color: white">Profile Details</h3>
+                <div class="tab-content tabs">
+                    <div role="tabpanel" class="tab-pane fade in active" id="Section1">
+                        <div class="account-profile text-center">
+                            <div class="account-profile-img">
+                                {% if request.user.photo %}
+                                <img title="Foydalanuvchi rasmi" src="{{ request.user.photo.url }}" alt="Profile Image" width="100">
+                                {% else %}
+                                <img  width="100" style="border-radius:50%" title="Default image" src="https://www.shutterstock.com/image-vector/vector-flat-illustration-grayscale-avatar-600nw-2264922221.jpg" alt="Profile Image">
+                                {% endif %}
+                            </div>
+                            <ul>
+                                <li><a onclick="document.getElementById('fileInput').click();" style="color:white;">
+                                    Update
+                                    <form id="imageForm" method="post" enctype="multipart/form-data"
+                                          action="{% url 'update_photo' %}">
+                                    {% csrf_token %}
+                                    <input type="file" id="fileInput" name="image"
+                                           accept=".jpg,.jpeg,.png" style="display: none;"
+                                           onchange="document.getElementById('imageForm').submit();">
+                                    </form>
+                                </a></li>
+                                <li><a href="#" style="color:white;">Remove</a></li>
+                                <li  onclick="change_input()" style="color:white;"><a><i class="fa fa-pen" style="cursor: pointer;"></i>Edit Data</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="form-horizontal">
+                            <form method="POST" action="{% url 'profile' %}">
+                                {% csrf_token %}
+                                <div class="form-group">
+                                    <label for="first_name">First Name</label>
+                                    <input id="update_first_name" type="text" class="form-control" name="first_name" value="{{ request.user.first_name }}" disabled required>
+                                </div>
+
+
+                                <div class="form-group">
+                                    <label for="last_name">Last Name</label>
+                                    <input id="update_last_name" type="text" class="form-control" name="last_name"
+                                           value="{{ request.user.last_name}}" disabled required>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="email">Email address</label>
+                                    <input id="update_email" type="email" class="form-control" name="email" value="{{ request.user.email}}"
+                                           placeholder="Email uchun namuna: salom@gamil.com" disabled required>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="phone">Phone Number</label>
+                                    <input id="update_phone_number" type="text" class="form-control" name="phone" placeholder="+998901234567"
+                                           value="{{ request.user.phone_number }}" disabled required>
+                                </div>
+
+                                <div class="form-group">
+                                    <button type="submit" class="btn btn-default" id="save_button" hidden="hidden">Save</button>
+                                </div>
+                            </form>
+                        </div>
+
+                        <div class="form-horizontal">
+                            <h3 style="color: white">Change Password</h3>
+                            <form method="POST" action="">
+                                {% csrf_token %}
+                                <div class="form-group">
+                                    <label for="current_password">Current Password</label>
+                                    <input type="password" class="form-control" id="current_password" name="current_password" required>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="new_password">New Password</label>
+                                    <input type="password" class="form-control" id="new_password" name="new_password" required>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="confirm_password">Confirm Password</label>
+                                    <input type="password" class="form-control" id="confirm_password" name="confirm_password" required>
+                                </div>
+
+                                <div class="form-group">
+                                    <button type="submit" class="btn btn-default">Change Password</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock content %}
+
+
+{% block scripts %}
+<script>
+
+    function change_input(){
+    const first_name = document.getElementById("update_first_name");
+    first_name.removeAttribute("disabled");
+    first_name.style.border = "2px solid white";
+    first_name.style.fontSize = "18px";
+    first_name.focus();
+
+    const last_name = document.getElementById("update_last_name");
+    last_name.removeAttribute("disabled");
+    last_name.style.border = "2px solid white";
+    last_name.style.fontSize = "18px";
+    last_name.focus();
+
+    const email = document.getElementById("update_email");
+    email.removeAttribute("disabled");
+    email.style.border = "2px solid white";
+    email.style.fontSize = "18px";
+    email.focus();
+
+    const phone_number = document.getElementById("update_phone_number");
+    phone_number.removeAttribute("disabled");
+    phone_number.style.border = "2px solid white";
+    phone_number.style.fontSize = "18px";
+    phone_number.focus();
+
+    const save_button = document.getElementById("save_button");
+    save_button.removeAttribute("hidden");
+    };
+
+</script>
+{% endblock scripts %}
