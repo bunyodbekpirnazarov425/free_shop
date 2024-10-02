@@ -1,6 +1,6 @@
 from lib2to3.fixes.fix_input import context
 
-from django.contrib.auth import authenticate, login, logout, get_user_model
+from django.contrib.auth import authenticate, login, logout, get_user_model, update_session_auth_hash
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.core.handlers.wsgi import WSGIRequest
 from django.template.context_processors import request
@@ -117,14 +117,22 @@ class UpdateProfileImageView(LoginRequiredMixin, View):
         messages.error(request, 'Rasmni yuklashda xato!')
         return redirect('profile')
 
-# class CustomChangePasswordView(View):
-#     def post(self,request):
-#         form = PasswordChangeForm(request.user, data=request.POST)
-#         if form.is_valid():
-#             user = form.save()
-#             update_session_auth_hash(request, user)
-#             messages.success(request, 'Parolingiz qaydi shakllandi')
-#             return redirect('home')
-#         else:
-#             messages.error(request, 'Parolni to' 'gri qilgan va yoki tugmasini bos qilingan')
-#             return redirect('password_change')
+class CustomChangePasswordView(View):
+    # def post(self,request):
+    #     form = PasswordChangeForm(request.user, data=request.POST)
+    #     if form.is_valid():
+    #         user = form.save()
+    #         update_session_auth_hash(request, user)
+    #         messages.success(request, 'Parolingiz qaydi shakllandi')
+    #         return redirect('home')
+    #     else:
+    #         messages.error(request, 'Parolni to' 'gri qilgan va yoki tugmasini bos qilingan')
+    #         return redirect('password_change')
+
+    def post(self, request):
+        form = PasswordChangeForm(request.user, data=request.POST)
+        if form.is_valid():
+            user = form.save()
+            update_session_auth_hash(request,user)
+            return redirect('login')
+        return redirect('profile')
